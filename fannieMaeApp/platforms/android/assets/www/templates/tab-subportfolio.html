@@ -1,0 +1,26 @@
+<ion-view style="" title="SubPortfolios">
+
+  <ion-header-bar class="bar bar-header bar-calm">
+    <h1 class="title">SubPortfolio</h1>
+  </ion-header-bar>
+
+    <ion-content class="has-header" overflow-scroll="true" padding="true">
+
+        <form style="" class="list">
+            <label style="" class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input placeholder="Search for portfolio or application" type="search">
+            </label>
+        </form>
+
+        <div>{{errorMsg}}</div>
+        <div class="list">
+          <a ng-repeat="subPort in subPortList" class="item" ui-sref="tab.assets({subPortId: subPort.doc.SubPortfolio})">
+            <div>{{ subPort.doc.SubPortfolio }}</div>
+          </a>
+        </div>
+
+        <div style="width: 300px; height: 27px;" class="spacer"></div>
+
+    </ion-content>
+</ion-view>

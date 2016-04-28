@@ -1,0 +1,37 @@
+<ion-view style="" title="Assets">
+
+  <ion-header-bar class="bar bar-header bar-calm">
+    <h1 class="title">Assets</h1>
+  </ion-header-bar>
+
+  <ion-content class="has-header" overflow-scroll="true" padding="true">
+
+    <form style="" class="list">
+      <label style="" class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input placeholder="Search for assets" type="search">
+      </label>
+    </form>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        DevStatus
+      </div>
+      <select ng-model="selectedItem"
+              ng-options="x for (x, y) in listOfOptions"
+              ng-change="selectedItemChanged(selectedItem)">
+      </select>
+      </label>
+
+    <div style="width: 300px; height: 27px;" class="spacer"></div>
+
+    <div>{{errorMsg}}</div>
+    <div class="list">
+      <a ng-repeat="asset in assetList" class="item" ui-sref="tab.assetdetail({assetId: asset.doc.AssetID})">
+        <div>{{ asset.doc.AssetName }} &nbsp; &nbsp; &nbsp; tqi: {{ asset.doc.TQI | number:2 }}</div>
+      </a>
+    </div>
+
+    <div style="width: 300px; height: 27px;" class="spacer"></div>
+
+  </ion-content>
+</ion-view>

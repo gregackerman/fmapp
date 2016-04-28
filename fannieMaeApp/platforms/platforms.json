@@ -1,0 +1,4 @@
+{
+    "android": "/mfpInstall/7.1/CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/platforms/cordova-android",
+    "ios": "/mfpInstall/7.1/CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/platforms/cordova-ios"
+}
